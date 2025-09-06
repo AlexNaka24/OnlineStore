@@ -1,0 +1,55 @@
+@import url(paleta-colores.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--background-primary-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: pink;
+}
+
+.navbar {
+    display: flex;
+    gap: 50px;
+}
+
+.navbar a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: var(--secondary-text-color);
+    transform: scale(1.1);
+}
+
+.icon-carrito i {
+    font-size: 20px;
+    transition: .3s;
+    color: #000;
+}
+
+.icon-carrito:hover i {
+    color: var(--secondary-text-color);
+    transform: scale(1.1);
+}
+
+.hero-image {
+    width: 800px;
+    height: 600px;
+}

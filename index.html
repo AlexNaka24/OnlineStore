@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dermobelleza Estetica</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  </head>
-  <body>
 
-    <!-- Navigator bar -->
-    <header class="header">
-      <a href="#" class="logo">Logo</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dermobelleza Estetica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles-index.css" />
+</head>
 
-      <div class="icon-carrito">
+<body>
+
+  <!-- Navigator bar -->
+  <header class="header">
+    <a href="#" class="logo">Logo</a>
+
+    <nav class="navbar">
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Productos</a>
+      <a href="#">Cursos</a>
+      <a href="#">Contacto</a>
+    </nav>
+
+    <div class="icon-carrito">
+      <a href="carrito.html">
         <i class="fas fa-shopping-cart"></i>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="texto-principal">Piel sana, brillo real</h1>
+        <p class="texto-secundario">Tratamientos faciales y corporales diseñados para resaltar tu belleza natural.</p>
+        <button class="btn-comprar">Comprar productos</button>
+        <button class="btn-servicios">Ver servicios</button>
+        <p class="p-resultados">✧ Resultados visibles</p>
+        <p class="p-aprobado">✓ Aprobado por profesionales</p>
       </div>
-    
-      <nav class="navbar">
-        <a href="#">Inicio</a>
-        <a href="#">Servicios</a>
-        <a href="#">Productos</a>
-        <a href="#">Cursos</a>
-        <a href="#">Contacto</a>
-      </nav>
-    </header>
-
-    <section class="hero-section">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="texto-principal">Piel sana, brillo real</h1>
-          <p class="texto-secundario">Tratamientos faciales y corporales diseñados para resaltar tu belleza natural.</p>
-          <button class="btn-comprar">Comprar productos</button>
-          <button class="btn-servicios">Ver servicios</button>
-          <p class="p-resultados">✧ Resultados visibles</p>
-          <p class="p-aprobado">✓ Aprobado por profesionales</p>
-        </div>     
-        <div class="container-hero-image">
-          <img class="hero-image" src="img/herosection.jpg" alt="Estética facial" />
-        </div>
+      <div class="container-hero-image">
+        <img class="hero-image" src="img/herosection.jpg" alt="Estética facial" />
       </div>
-    </section>
+    </div>
+  </section>
 
 
 
-    <script src="js/app.js"></script>
-  </body>
+  <script src="js/app.js"></script>
+</body>
+
 </html>
