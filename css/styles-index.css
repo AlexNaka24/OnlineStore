@@ -15,5 +15,35 @@ body {
 
 .hero-image {
     width: 800px;
-    height: 600px;
+    height: 700px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1,
+.hero-text p,
+.hero-text button,
+.hero-text .p-resultados,
+.hero-text .p-aprobado {
+    margin-bottom: 15px;
+}
+
+.hero-image {
+    max-width: 45%;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
 }
