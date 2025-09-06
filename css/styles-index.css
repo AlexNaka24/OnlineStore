@@ -47,3 +47,7 @@ body {
 .hero-image:hover {
     transform: scale(1.05);
 }
+
+.texto-principal {
+    color: var(--primary-text-color);
+}
