@@ -71,3 +71,41 @@ body {
     margin-top: 20px;
     margin-left: 80px;
 }
+
+.btn-comprar {
+    background-color: var(--primary-text-color);
+    color: var(--background-primary-color);
+    border: var(--background-primary-color);
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn-comprar:hover {
+    transform: scale(1.15);
+}
+
+.btn-servicios {
+    background-color: transparent;
+    color: var(--primary-text-color);
+    font-weight: 600;
+    border: 2px solid var(--primary-text-color);
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn-servicios:hover {
+    transform: scale(1.15);
+}
+
+.div-botones {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+    flex-direction: row;
+    margin-left: 120px;
+}
