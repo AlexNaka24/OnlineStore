@@ -6,6 +6,25 @@
     background-color: pink;
 }
 
+.logo {
+    height: 30px;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 3.1px 6.2px 6.2px hsl(0deg 0% 0% / 0.40);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nombre-logo {
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+    font-weight: 700;
+}
+
 .navbar {
     display: flex;
     gap: 50px;

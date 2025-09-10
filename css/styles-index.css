@@ -1,5 +1,6 @@
 @import url('paleta-colores.css');
 @import url('navbar/styles-navbar.css');
+@import url('navbar/styles-modal-contacto.css');
 
 * {
     margin: 0;
@@ -71,6 +72,7 @@ body {
     border-radius: 20px;
     cursor: pointer;
     transition: transform 0.3s;
+    box-shadow: 3.1px 6.2px 6.2px hsl(0deg 0% 0% / 0.40);
 }
 
 .btn-comprar {
