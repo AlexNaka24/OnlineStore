@@ -99,18 +99,13 @@ body {
     margin-top: 1rem;
 }
 
-.div-preguntas {
+.div-beneficios {
     margin-top: 1rem;
     margin-left: 1rem;
     padding: 5px;
 }
 
-.div-preguntas h4 {
-    margin-bottom: 0.5rem;
-    color: var(--secondary-text-color);
-}
-
-.ul-preguntas {
+.ul-beneficios {
     list-style-type: disc;
     padding-left: 20px;
     color: var(--secondary-text-color);
