@@ -25,6 +25,7 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     transform: translateY(-50px);
     opacity: 0;
+    border: 1px solid var(--primary-text-color);
     animation: slideDown 0.5s forwards;
 }
 
