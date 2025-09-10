@@ -1,5 +1,5 @@
-@import url(paleta-colores.css);
-@import url(navbar/styles-navbar.css);
+@import url('navbar/styles-navbar.css');
+@import url('paleta-colores.css');
 
 * {
     margin: 0;
