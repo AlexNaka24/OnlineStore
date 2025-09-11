@@ -11,9 +11,10 @@
 
 body {
     min-height: 100vh;
-    background: linear-gradient(to bottom, var(--background-primary-color), #c6adb1);
 }
 
+
+/*----------------Hero section-----------------*/
 .hero-content {
     display: flex;
     align-items: center;
@@ -113,9 +114,21 @@ body {
     font-size: 0.85rem;
 }
 
+
+/*----------------Productos destacados-----------------*/
 .productos-destacados {
     text-align: center;
     padding: 3rem 2rem;
+}
+
+.product-box {
+    background: #f8dfe6;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 2rem;
+    width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .titulo-destacados {
@@ -133,9 +146,12 @@ body {
 
 .cards {
     display: flex;
-    gap: 200px;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem;
 }
 
 .card {
@@ -153,7 +169,7 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-20px);
+    transform: scale(1.05);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
@@ -211,4 +227,35 @@ body {
 
 .card3 {
     background-image: url('../img/espponja.png');
+}
+
+/*----------------Servicios destacados-----------------*/
+.servicios-destacados {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.titulo-servicio-destacados {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-text-color);
+    margin-bottom: 0.5rem;
+}
+
+.p-servicio-destacados {
+    font-size: 1rem;
+    color: var(--primary-text-color);
+    margin-bottom: 4rem;
+}
+
+.card1-servicio {
+    background-image: url('../img/peeling.jpg');
+}
+
+.card2-servicio {
+    background-image: url('../img/limpieza-facial-profunda.jpg');
+}
+
+.card3-servicio {
+    background-image: url('../img/anti-edad.jpg');
 }
