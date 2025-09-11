@@ -11,10 +11,7 @@
 
 body {
     min-height: 100vh;
-}
-
-.hero-section {
-    background: var(--background-primary-color);
+    background: linear-gradient(to bottom, var(--background-primary-color), #c6adb1);
 }
 
 .hero-content {
@@ -119,7 +116,6 @@ body {
 .productos-destacados {
     text-align: center;
     padding: 3rem 2rem;
-    background: var(--background-primary-color);
 }
 
 .titulo-destacados {
