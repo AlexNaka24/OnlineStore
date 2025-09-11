@@ -17,6 +17,19 @@ body {
 /*----------------Hero section-----------------*/
 .hero-section {
     background-image: url('../img/fondo.jpg');
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    /* altura del difuminado */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FBE9F0 100%);
 }
 
 .hero-content {
@@ -122,7 +135,7 @@ body {
 
 
 .fondo-secciones {
-    background: radial-gradient(circle at top left, #fde6ee 0%, #ffffff 70%);
+    background: linear-gradient(180deg, #FBE9F0 0%, #FFFFFF 100%);
 }
 
 /*----------------Productos destacados-----------------*/
@@ -132,13 +145,13 @@ body {
 }
 
 .product-box {
-    background: #f8dfe6;
+    background: #F5D6E0;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 25px;
     padding: 2rem;
     width: 1200px;
     margin: 0 auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 30px 40px rgba(45, 42, 74, 0.06);
 }
 
 .titulo-destacados {
@@ -216,7 +229,7 @@ body {
 
 .card-content a {
     font-size: 14px;
-    color: black;
+    color: #D97BA6;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
