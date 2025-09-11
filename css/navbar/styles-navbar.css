@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    background-color: pink;
+    background: #F8F9FA;
 }
 
 .logo {
@@ -21,7 +21,7 @@
 
 .nombre-logo {
     font-size: 1.5rem;
-    color: var(--primary-text-color);
+    color: #2D2A4A;
     font-weight: 700;
 }
 
@@ -33,23 +33,23 @@
 .navbar a {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: #000;
+    color: #2D2A4A;
     font-weight: 500;
     transition: .3s;
 }
 
 .navbar a:hover {
-    color: var(--secondary-text-color);
+    color: #C8B6FF;
     transform: scale(1.1);
 }
 
 .icon-carrito i {
     font-size: 20px;
     transition: .3s;
-    color: #000;
+    color: #2D2A4A;
 }
 
 .icon-carrito:hover i {
-    color: var(--secondary-text-color);
+    color: #C8B6FF;
     transform: scale(1.1);
 }

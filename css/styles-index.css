@@ -15,6 +15,10 @@ body {
 
 
 /*----------------Hero section-----------------*/
+.hero-section {
+    background-image: url('../img/fondo.jpg');
+}
+
 .hero-content {
     display: flex;
     align-items: center;
@@ -57,7 +61,8 @@ body {
 
 .texto-secundario {
     font-size: 1.2rem;
-    color: var(--secondary-text-color);
+    color: #4A4A4A;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
     line-height: 1.6;
 }
 
@@ -78,8 +83,8 @@ body {
 }
 
 .btn-comprar {
-    background-color: var(--primary-text-color);
-    color: var(--background-primary-color);
+    background: linear-gradient(135deg, #C8B6FF, #2D2A4A);
+    color: #FFFFFF;
     border: none;
 }
 
@@ -89,9 +94,9 @@ body {
 }
 
 .btn-servicios {
-    background: transparent;
-    color: var(--primary-text-color);
-    border: 2px solid var(--primary-text-color);
+    background: #C8B6FF;
+    color: #2D2A4A;
+    border: none;
 }
 
 .div-botones {
@@ -109,11 +114,16 @@ body {
 .ul-beneficios {
     list-style-type: disc;
     padding-left: 20px;
-    color: var(--secondary-text-color);
+    color: #4A4A4A;
     line-height: 1.8;
     font-size: 0.85rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
+
+.fondo-secciones {
+    background: radial-gradient(circle at top left, #fde6ee 0%, #ffffff 70%);
+}
 
 /*----------------Productos destacados-----------------*/
 .productos-destacados {
@@ -132,15 +142,14 @@ body {
 }
 
 .titulo-destacados {
-    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    color: var(--primary-text-color);
+    color: #2D2A4A;
     margin-bottom: 0.5rem;
 }
 
 .p-destacados {
     font-size: 1rem;
-    color: var(--primary-text-color);
+    color: #2D2A4A;
     margin-bottom: 4rem;
 }
 
@@ -201,7 +210,7 @@ body {
 
 .card-content h3 {
     font-size: 18px;
-    color: #222;
+    color: #2D2A4A;
     margin-bottom: 10px;
 }
 
@@ -236,7 +245,6 @@ body {
 }
 
 .titulo-servicio-destacados {
-    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     color: var(--primary-text-color);
     margin-bottom: 0.5rem;
@@ -258,4 +266,12 @@ body {
 
 .card3-servicio {
     background-image: url('../img/anti-edad.jpg');
+}
+
+/*----------------Footer----------------*/
+footer {
+    background-color: var(--background-primary-color);
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
