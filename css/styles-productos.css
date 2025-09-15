@@ -13,3 +13,13 @@ body {
     min-height: 100vh;
     background-color: var(--background-primary-color);
 }
+
+.productos-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--primary-text-color);
+}
