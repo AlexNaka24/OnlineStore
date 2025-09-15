@@ -1,6 +1,5 @@
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
     background: #F8F9FA;
@@ -28,6 +27,8 @@
 .navbar {
     display: flex;
     gap: 50px;
+    margin-left: auto;
+    margin-right: 20px;
 }
 
 .navbar a {
@@ -51,5 +52,55 @@
 
 .icon-carrito:hover i {
     color: #C8B6FF;
+    transform: scale(1.1);
+}
+
+.header .acciones-derecha {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 4px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    transition: box-shadow .3s;
+}
+
+.barra-busqueda:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
+}
+
+.barra-busqueda input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 6px 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    width: 160px;
+}
+
+.barra-busqueda button {
+    background: #C8B6FF;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: #2D2A4A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .3s, transform .2s;
+}
+
+.barra-busqueda button:hover {
+    background: #b3a1f5;
     transform: scale(1.1);
 }
