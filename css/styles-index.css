@@ -27,7 +27,6 @@ body {
     left: 0;
     width: 100%;
     height: 120px;
-    /* altura del difuminado */
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FBE9F0 100%);
 }
 
