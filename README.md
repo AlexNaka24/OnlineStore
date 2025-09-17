@@ -1,1 +1,1 @@
-project for university web applications
+project for web applications
