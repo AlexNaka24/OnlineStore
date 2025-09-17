@@ -29,6 +29,7 @@ body {
     background-image: url('../img/fondo.jpg');
     position: relative;
     overflow: hidden;
+    min-height: 780px;
 }
 
 .hero-section::after {
