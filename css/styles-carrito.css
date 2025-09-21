@@ -12,3 +12,130 @@
 body {
     background: var(--background-primary-color);
 }
+
+/* Contenedor del título */
+.cart-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.cart-title-container h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-left: 25rem;
+}
+
+.items-in-cart {
+    font-size: 0.95rem;
+    color: #666;
+    margin-right: 70rem;
+}
+
+/* Contenedor principal del carrito */
+.cart-products-container {
+    padding: 1.5rem;
+    background-color: #fff;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de producto */
+.cart-product-card-component {
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.cart-product-card-component:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+/* Imagen del producto */
+.cart-product-component-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Info producto */
+.cart-product-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.cart-product-component-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.delete-icon:hover {
+    opacity: 1;
+}
+
+.cart-product-component-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+/* Cantidad y precio */
+.quantity-button-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity-button-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-button-container button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.quantity-button-container button:hover {
+    background: #eee;
+}
+
+.product-quantity {
+    min-width: 24px;
+    text-align: center;
+    font-weight: 500;
+    color: #333;
+}
+
+.product-prices-container .price-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #222;
+}
