@@ -1,6 +1,7 @@
 @import url('paleta-colores.css');
 @import url('navbar/styles-navbar.css');
 @import url('navbar/styles-modal-contacto.css');
+@import url('navbar/styles-footer.css');
 
 /* Media querys */
 
@@ -275,12 +276,4 @@ body {
 
 .card3-servicio {
     background-image: url('../img/anti-edad.jpg');
-}
-
-/*----------------Footer----------------*/
-footer {
-    background-color: var(--background-primary-color);
-    padding: 2rem 0;
-    text-align: center;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
