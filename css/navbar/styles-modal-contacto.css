@@ -1,4 +1,4 @@
-/* Modal elegante */
+/*-----------------Modal elegante-----------------*/
 .modal-elegante {
     display: none;
     position: fixed;
@@ -12,7 +12,7 @@
     animation: fadeIn 0.3s;
 }
 
-/* Card central */
+/*-----------------Card central-----------------*/
 .modal-card {
     background-color: var(--background-primary-color);
     color: var(--primary-text-color);
@@ -29,7 +29,7 @@
     animation: slideDown 0.5s forwards;
 }
 
-/* Animaciones */
+/*-----------------Animaciones-----------------*/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -47,7 +47,7 @@
     }
 }
 
-/* Títulos y textos */
+/*-----------------Titulos y textos-----------------*/
 .modal-card h2 {
     margin-bottom: 1rem;
     font-family: 'Playfair Display', serif;
@@ -59,7 +59,7 @@
     font-size: 1rem;
 }
 
-/* Redes */
+/*-----------------Redes-----------------*/
 .modal-card .redes a {
     display: flex;
     align-items: center;
@@ -81,7 +81,7 @@
     color: var(--secondary-text-color);
 }
 
-/* Botón cerrar */
+/*-----------------Boton cerrar-----------------*/
 .modal-card .close {
     position: absolute;
     top: 15px;

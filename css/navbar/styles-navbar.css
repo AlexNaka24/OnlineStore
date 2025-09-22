@@ -5,7 +5,7 @@
     background: #F8F9FA;
 }
 
-/* Logo */
+/*-----------------Logo-----------------*/
 .logo {
     height: 30px;
     width: auto;
@@ -25,7 +25,7 @@
     font-weight: 700;
 }
 
-/* Navbar */
+/*-----------------Navbar-----------------*/
 .navbar {
     display: flex;
     gap: 50px;
@@ -46,7 +46,7 @@
     transform: scale(1.1);
 }
 
-/* Carrito */
+/*-----------------Icon Carrito-----------------*/
 .icon-carrito i {
     font-size: 20px;
     transition: .3s;
@@ -64,7 +64,7 @@
     gap: 20px;
 }
 
-/* Barra busqueda */
+/*-----------------Barra de busqueda-----------------*/
 .barra-busqueda {
     display: flex;
     align-items: center;
@@ -107,4 +107,112 @@
 .barra-busqueda button:hover {
     background: #b3a1f5;
     transform: scale(1.1);
+}
+
+/*-----------------Tablet-----------------*/
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 12px 15px;
+        gap: 12px;
+        align-items: flex-start;
+        background: #F8F9FA;
+    }
+
+    .logo-container {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .nombre-logo {
+        font-size: 1.3rem;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0;
+        align-items: flex-start;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 6px 0;
+        text-align: left;
+        margin: 0;
+    }
+
+    .acciones-derecha {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .barra-busqueda {
+        width: 100%;
+        padding: 6px 10px;
+        border-radius: 15px;
+    }
+
+    .barra-busqueda input {
+        width: 100%;
+        font-size: 0.85rem;
+        padding: 4px 8px;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    .barra-busqueda button {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+        border: none;
+        background: #C8B6FF;
+        border-radius: 50%;
+        color: #2D2A4A;
+        cursor: pointer;
+    }
+
+    .icon-carrito i {
+        font-size: 18px;
+        color: #2D2A4A;
+    }
+
+    .icon-carrito:hover i {
+        color: #C8B6FF;
+    }
+}
+
+/*-----------------Mobile-----------------*/
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+
+    .nombre-logo {
+        font-size: 1.2rem;
+    }
+
+    .navbar a {
+        font-size: 0.95rem;
+    }
+
+    .barra-busqueda input {
+        font-size: 0.8rem;
+    }
+
+    .barra-busqueda button {
+        width: 26px;
+        height: 26px;
+    }
+
+    .icon-carrito i {
+        font-size: 16px;
+    }
 }
