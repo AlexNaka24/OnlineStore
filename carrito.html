@@ -25,7 +25,7 @@
             <a class="nav-contacto" href="#">Contacto</a>
         </nav>
 
-        <!-- Agrupación para que queden alineados a la derecha -->
+        <!-- Agrupacion para que queden alineados a la derecha -->
         <div class="acciones-derecha">
             <div class="barra-busqueda">
                 <input type="text" placeholder="Buscar productos..." id="search-input">
@@ -40,68 +40,60 @@
         </div>
     </header>
 
-    <!-- Titulo -->
+    <!-- Carrito -->
     <div class="cart-title-container">
-        <h2>Shopping cart</h2>
-        <span class="items-in-cart">2 items en tu carrito</span>
+        <h2>Tu carrito</h2>
+        <span class="items-in-cart">2 productos</span>
     </div>
 
-    <!-- Carrito -->
-    <section class="cart-products-container">
+    <div class="cart-products-container">
+
         <div class="cart-product-card-component">
-            <div class="cart-product-component-image-container">
-                <div class="cart-product-component-image">
-                    <img class="cart-product-component-image" src="img/Exfoliante.png" alt="Exfoliante">
-                </div>
+            <div class="cart-product-component-image">
+                <img src="img/gel-facial.jpg" alt="Producto">
+            </div>
+            <div class="cart-product-info">
                 <div class="cart-product-title-container">
-                    <span class="cart-product-component-title">Exfoliante</span>
-                    <img class="delete-icon" src="img/bote-de-basura.png" alt="delete">
+                    <h3 class="cart-product-component-title">Gel Facial</h3>
+                    <img src="img/bote-de-basura.png" alt="Eliminar" class="delete-icon">
                 </div>
-                <p class="cart-product-component-description">Limpiar cara y quitar piel muerta</p>
+                <p class="cart-product-component-description">Hidratante, piel sensible</p>
                 <div class="quantity-button-price-container">
                     <div class="quantity-button-container">
-                        <button class="substract-button">
-                            <span>-</span>
-                        </button>
+                        <button>-</button>
                         <span class="product-quantity">1</span>
-                        <button class="add-button">
-                            <span>+</span>
-                        </button>
+                        <button>+</button>
                     </div>
                     <div class="product-prices-container">
-                        <span class="price-text">$12.99</span>
+                        <span class="price-text">$12000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-product-card-component">
+            <div class="cart-product-component-image">
+                <img src="img/espponja.png" alt="Producto">
+            </div>
+            <div class="cart-product-info">
+                <div class="cart-product-title-container">
+                    <h3 class="cart-product-component-title">Esponja facial</h3>
+                    <img src="img/bote-de-basura.png" alt="Eliminar" class="delete-icon">
+                </div>
+                <p class="cart-product-component-description">Limpiar tu cara</p>
+                <div class="quantity-button-price-container">
+                    <div class="quantity-button-container">
+                        <button>-</button>
+                        <span class="product-quantity">1</span>
+                        <button>+</button>
+                    </div>
+                    <div class="product-prices-container">
+                        <span class="price-text">$5500</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="cart-product-card-component">
-            <div class="cart-product-component-image-container">
-                <div class="cart-product-component-image">
-                    <img class="cart-product-component-image" src="img/Exfoliante.png" alt="Exfoliante">
-                </div>
-                <div class="cart-product-title-container">
-                    <span class="cart-product-component-title">Exfoliante</span>
-                    <img class="delete-icon" src="img/bote-de-basura.png" alt="delete">
-                </div>
-                <p class="cart-product-component-description">Limpiar cara y quitar piel muerta</p>
-                <div class="quantity-button-price-container">
-                    <div class="quantity-button-container">
-                        <button class="substract-button">
-                            <span>-</span>
-                        </button>
-                        <span class="product-quantity">1</span>
-                        <button class="add-button">
-                            <span>+</span>
-                        </button>
-                    </div>
-                    <div class="product-prices-container">
-                        <span class="price-text">$12.99</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Modal Contacto -->
     <div id="modal-contacto" class="modal-elegante">
