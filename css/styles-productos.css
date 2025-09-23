@@ -142,6 +142,88 @@ body {
     background: #a486f7;
 }
 
+.brands-swapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 50px auto;
+    overflow: hidden;
+    padding: 30px 0;
+    background: #f9f9f9;
+    border-radius: 12px;
+}
+
+.brands-track {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    animation: scrollBrands 20s linear infinite;
+    padding-left: 5%;
+}
+
+.brand-item {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.brand-item:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.brand-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(80%);
+    transition: all 0.3s ease;
+}
+
+.brand-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* Animacion */
+@keyframes scrollBrands {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .brand-item {
+        width: 120px;
+        height: 60px;
+    }
+
+    .brands-track {
+        gap: 20px;
+        padding-left: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .brand-item {
+        width: 90px;
+        height: 50px;
+    }
+
+    .brands-swapper {
+        padding: 20px 0;
+    }
+}
+
 /*--------------------MEDIA QUERIES----------------------*/
 /* Tablet */
 @media (max-width: 768px) {
