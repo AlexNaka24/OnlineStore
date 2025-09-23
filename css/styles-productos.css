@@ -106,14 +106,14 @@ body {
 
 .product-info h3 {
     font-size: 1.1rem;
-    color: #2D2A4A;
+    color: var(--primary-text-color);
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
 .price-new {
     font-weight: 700;
-    color: #004A80;
+    color: #6D28D9;
     font-size: 1.1rem;
     margin-bottom: 0.8rem;
     display: block;
@@ -142,29 +142,7 @@ body {
     background: #a486f7;
 }
 
-/*-----------------------Carrousel---------------------------*/
-.carrousel {
-    width: 100vw;
-    height: 300px;
-    padding: 20px;
-    display: flex;
-    gap: 4vw;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-}
-
-.carrousel li {
-    list-style-type: none;
-    background-color: #eeeeee;
-    border: 1px solid #dddddd;
-    padding: 20px;
-    flex: 0 0 100%;
-    scroll-snap-align: center;
-}
-
-
 /*--------------------MEDIA QUERIES----------------------*/
-
 /* Tablet */
 @media (max-width: 768px) {
     .products-container {
