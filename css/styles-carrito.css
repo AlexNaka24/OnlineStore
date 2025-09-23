@@ -311,6 +311,47 @@ body {
     margin-left: 0.8rem;
 }
 
+.cart-actions {
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 700px;
+}
+
+.btn-checkout {
+    background: #F3E8FF;
+    color: var(--primary-text-color);
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+}
+
+.btn-checkout:hover {
+    background: #D0BFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .btn-checkout {
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-checkout {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+
 @media (max-width: 480px) {
     .quantity-button-price-container {
         flex-direction: column;
