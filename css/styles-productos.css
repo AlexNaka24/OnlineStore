@@ -222,6 +222,7 @@ body {
     flex: 1;
 }
 
+/* Hacer responsiveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee se superpone el filtro con los productos en mobile*/
 @media (max-width: 992px) {
     .layout-filtro {
         flex-direction: column;
