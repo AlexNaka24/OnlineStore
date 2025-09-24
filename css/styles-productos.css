@@ -1,7 +1,7 @@
 @import url('navbar/styles-navbar.css');
 @import url('paleta-colores.css');
-@import url('navbar/styles-modal-contacto.css');
 
+/*-------------------Estilos globales----------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -14,16 +14,114 @@ body {
 }
 
 /*-----------------------------Main-------------------------------*/
+.section-main {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 0;
+}
 
+.main-image-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 40%;
+    overflow: hidden;
+}
 
+.main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+    z-index: 1;
+}
 
+.main-content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    z-index: 2;
+    color: var(--primary-text-color);
+}
 
+.main-title-container h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.main-subtitle {
+    font-size: 1.1rem;
+    color: var(--primary-text-color);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-weight: 400;
+}
+
+.info-pago-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    min-width: 220px;
+    transition: transform 0.2s;
+}
+
+.beneficio-item:hover {
+    transform: translateY(-3px);
+}
+
+.icono-beneficio {
+    font-size: 1.6rem;
+    color: #6D28D9;
+    width: 40px;
+    text-align: center;
+}
+
+.beneficio-item h3 {
+    font-size: 1.1rem;
+    color: #2D2A4A;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.beneficio-item p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+}
 
 /* -----------------------Filtros----------------------- */
 .filtro-flotante {
     position: fixed;
     top: 100px;
-    /* Debajo del header */
     left: 20px;
     width: 200px;
     background: white;
@@ -182,6 +280,7 @@ body {
     background: #a486f7;
 }
 
+/*-------------------------Slider de las marcas----------------------------*/
 .brands-swapper {
     width: 100%;
     max-width: 1280px;

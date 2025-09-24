@@ -1,9 +1,14 @@
-@import url('navbar/styles-navbar.css');
 @import url('paleta-colores.css');
+@import url('navbar/styles-navbar.css');
 
+/*----------------Estilos globales----------------*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
 }
