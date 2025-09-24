@@ -222,7 +222,6 @@ body {
     flex: 1;
 }
 
-
 @media (max-width: 992px) {
     .layout-filtro {
         flex-direction: column;
