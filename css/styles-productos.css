@@ -133,6 +133,10 @@ body {
     border-radius: 12px;
     font-family: 'Poppins', sans-serif;
     font-size: 0.95rem;
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+    z-index: 10;
 }
 
 .filtro-ml h3 {
