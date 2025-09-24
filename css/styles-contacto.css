@@ -10,5 +10,124 @@
 }
 
 body {
-    min-height: 100vh;
+    background-color: #FBE9F0;
+    color: #2D2A4A;
+    line-height: 1.6;
+}
+
+/*----------------------------Formulario de contacto-----------------------------*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contact-section {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+}
+
+.contact-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #2D2A4A;
+    text-align: center;
+}
+
+.contact-content {
+    display: flex;
+    gap: 3rem;
+}
+
+.info-contacto {
+    flex: 1;
+}
+
+.info-contacto h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #6D28D9;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 1.2rem;
+}
+
+.info-item i {
+    font-size: 1.2rem;
+    color: #6D28D9;
+    margin-top: 4px;
+}
+
+.info-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.form-contacto {
+    flex: 1;
+}
+
+.form-contacto h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #6D28D9;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #2D2A4A;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.btn-enviar {
+    background: #6D28D9;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-enviar:hover {
+    background: #511aa3;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-section {
+        padding: 2rem;
+    }
 }
