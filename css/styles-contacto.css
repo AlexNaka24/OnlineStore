@@ -88,7 +88,7 @@ body {
     display: block;
     margin-bottom: 6px;
     font-weight: 500;
-    color: #2D2A4A;
+    color: var(--primary-text-color);
 }
 
 .form-group input,
