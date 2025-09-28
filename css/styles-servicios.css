@@ -8,6 +8,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-color: #FBE9F0;
+}
+
 .servicio {
     display: flex;
 }
@@ -46,4 +50,31 @@
     color: var(--primary-text-color);
     font-weight: 700;
     margin-top: 12px;
+}
+
+.servicio-content ul {
+    list-style-type: none;
+}
+
+.servicio-content li::marker {
+    content: "✔";
+    color: #6D28D9;
+    font-size: 1rem;
+}
+
+.btn-reserva {
+    background: #6D28D9;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 1rem;
+}
+
+.btn-reserva:hover {
+    background: #511aa3;
 }
