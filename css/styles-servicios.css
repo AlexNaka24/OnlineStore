@@ -7,3 +7,25 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+.servicio {
+    display: flex;
+}
+
+.servicio-image {
+    display: flex;
+    justify-content: center;
+    width: 40rem;
+    height: 30rem;
+}
+
+.servicio-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.servicio-content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
