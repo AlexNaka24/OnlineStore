@@ -74,32 +74,31 @@ body {
     font-weight: 400;
 }
 
+/* Ajustes en mobile */
 @media (max-width: 768px) {
-
     .main-title-container h1 {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         margin-top: 1rem;
     }
 
     .main-title-container p {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
-
-    .main-title-container h1,
-    .main-title {
+    .main-title-container h1 {
         font-size: 1rem;
         line-height: 1.1;
     }
 
     .main-subtitle {
-        font-size: 0.3rem;
+        font-size: 0.8rem;
         line-height: 1.3;
     }
 }
 
+/*---------------------Beneficios---------------------*/
 .info-pago-container {
     display: flex;
     flex-wrap: wrap;
@@ -119,7 +118,6 @@ body {
     border-radius: 12px;
     padding: 14px 18px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    min-width: 0;
     flex: 0 1 auto;
     max-width: 360px;
     width: auto;
@@ -162,7 +160,6 @@ body {
     display: flex;
     gap: 2rem;
     width: 100%;
-    padding: 0;
     margin: 2rem 0;
 }
 
@@ -170,12 +167,13 @@ body {
     width: 240px;
     padding: 1.5rem;
     border-radius: 12px;
-    font-family: 'Poppins', sans-serif;
     font-size: 0.95rem;
     position: sticky;
     top: 80px;
     align-self: flex-start;
     z-index: 10;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .filtro-ml h3 {
@@ -228,11 +226,6 @@ body {
     gap: 4px;
 }
 
-.input-precio label {
-    font-size: 0.9rem;
-    color: #555;
-}
-
 .input-precio input {
     width: 100%;
     padding: 6px 8px;
@@ -261,35 +254,46 @@ body {
     flex: 1;
 }
 
-/* Hacer responsiveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee se superpone el filtro con los productos en mobile*/
+/* ----------- RESPONSIVE FILTRO ----------- */
 @media (max-width: 992px) {
     .layout-filtro {
         flex-direction: column;
+        gap: 1.5rem;
         padding: 0 1rem;
     }
 
     .filtro-ml {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .filtro-ml {
-        position: static;
+        position: relative;
         top: auto;
         width: 100%;
         margin-bottom: 1.5rem;
-        z-index: auto;
-    }
-
-    .layout-filtro {
-        flex-direction: column;
-        padding: 0 1rem;
     }
 
     .contenido-principal {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout-filtro {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .filtro-ml {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .products-container {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .product-item {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -299,8 +303,29 @@ body {
     }
 
     .products-container {
-        padding: 0 1rem;
-        gap: 1rem;
+        padding: 0;
+        gap: 0.8rem;
+    }
+
+    .product-item {
+        width: 100%;
+    }
+
+    .product-image {
+        height: 150px;
+    }
+
+    .product-info h3 {
+        font-size: 0.9rem;
+    }
+
+    .price-new {
+        font-size: 0.9rem;
+    }
+
+    .btn-comprar {
+        font-size: 0.8rem;
+        padding: 8px 12px;
     }
 }
 
@@ -323,7 +348,6 @@ body {
     color: #2D2A4A;
     margin-bottom: 2rem;
     font-weight: 700;
-    margin-left: 0;
 }
 
 .products-container {
@@ -481,55 +505,5 @@ body {
 
     .brands-swapper {
         padding: 20px 0;
-    }
-}
-
-/*--------------------MEDIA QUERIES----------------------*/
-/* Tablet */
-@media (max-width: 768px) {
-    .products-container {
-        gap: 1.2rem;
-    }
-
-    .product-item {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .product-info h3 {
-        font-size: 1rem;
-    }
-
-    .price-new {
-        font-size: 1rem;
-    }
-
-    .btn-comprar {
-        font-size: 0.85rem;
-        padding: 8px 16px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .products-container {
-        gap: 1rem;
-    }
-
-    .product-item {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .product-image {
-        height: 160px;
-    }
-
-    .product-info h3 {
-        font-size: 0.95rem;
-    }
-
-    .price-new {
-        font-size: 0.95rem;
     }
 }
