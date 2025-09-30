@@ -11,13 +11,20 @@
 </head>
 
 <body>
+
     <!-- Navigator bar -->
     <header class="header">
         <div class="logo-container">
-            <h4 class="nombre-logo">Wabi sabi</h4>
+            <h4 class="nombre-logo">Wabi Sabi</h4>
         </div>
 
-        <nav class="navbar">
+        <div class="menu-hamburguesa" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar" id="navbar">
             <a class="nav-inicio" href="index.html">Inicio</a>
             <a class="nav-servicios" href="servicios.html">Servicios</a>
             <a class="nav-productos" href="productos.html">Productos</a>
@@ -54,7 +61,11 @@
                     <h3 class="cart-product-component-title">Gel Facial</h3>
                     <img src="img/bote-de-basura.png" alt="Eliminar" class="delete-icon">
                 </div>
+
                 <p class="cart-product-component-description">Hidratante, piel sensible</p>
+
+                <a href="detalles.html" class="btn-detalle">Ver detalles</a>
+
                 <div class="quantity-button-price-container">
                     <div class="quantity-button-container">
                         <button>-</button>
@@ -67,6 +78,7 @@
                 </div>
             </div>
         </div>
+
         <div class="cart-product-card-component">
             <div class="cart-product-component-image">
                 <img src="img/espponja.png" alt="Producto">
@@ -76,7 +88,11 @@
                     <h3 class="cart-product-component-title">Esponja facial</h3>
                     <img src="img/bote-de-basura.png" alt="Eliminar" class="delete-icon">
                 </div>
+
                 <p class="cart-product-component-description">Limpiar tu cara</p>
+
+                <a class="btn-detalle">Ver detalles</a>
+
                 <div class="quantity-button-price-container">
                     <div class="quantity-button-container">
                         <button>-</button>
