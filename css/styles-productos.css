@@ -74,7 +74,6 @@ body {
     font-weight: 400;
 }
 
-/* Ajustes en mobile */
 @media (max-width: 768px) {
     .main-title-container h1 {
         font-size: 1.2rem;
@@ -254,7 +253,6 @@ body {
     flex: 1;
 }
 
-/* ----------- RESPONSIVE FILTRO ----------- */
 @media (max-width: 992px) {
     .layout-filtro {
         flex-direction: column;
@@ -483,7 +481,6 @@ body {
     }
 }
 
-/* Tablet */
 @media (max-width: 768px) {
     .brand-item {
         width: 120px;
@@ -496,7 +493,6 @@ body {
     }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
     .brand-item {
         width: 90px;

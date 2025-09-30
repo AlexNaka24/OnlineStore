@@ -12,42 +12,89 @@ body {
     background-color: #FBE9F0;
 }
 
+.black-layout {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("../img/home-image.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.black-layout::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.overlay-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.overlay-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Playfair Display';
+    margin-bottom: 0.5rem;
+}
+
+.overlay-content h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.overlay-content p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .servicio {
     display: flex;
-    margin-bottom: 20rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin: 5rem auto;
+    max-width: 1200px;
+    padding: 1rem;
+    margin-bottom: 15rem;
 }
 
 .servicio-image {
-    display: flex;
-    justify-content: center;
-    width: 40rem;
-    height: auto;
-    margin-left: 20rem;
-    margin-top: 3rem;
+    flex: 1;
 }
 
 .servicio-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 20px;
-    object-fit: fill;
+    object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .servicio-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 15px;
-    width: 25rem;
-    margin-left: 10rem;
-    margin-top: 3rem;
 }
 
 .servicio-content h2 {
     color: var(--primary-text-color);
     font-weight: 700;
     margin-bottom: 12px;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .servicio-content h3 {
@@ -57,13 +104,15 @@ body {
 }
 
 .servicio-content ul {
-    list-style-type: none;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
-.servicio-content li::marker {
-    content: "✔";
+.servicio-content li::before {
+    content: "✔ ";
     color: #6D28D9;
-    font-size: 1rem;
+    font-weight: bold;
 }
 
 .btn-reserva {
@@ -77,8 +126,47 @@ body {
     cursor: pointer;
     transition: background 0.2s;
     margin-top: 1rem;
+    align-self: flex-start;
 }
 
 .btn-reserva:hover {
     background: #511aa3;
+}
+
+@media (max-width: 768px) {
+    .servicio {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .servicio-content {
+        align-items: center;
+        padding: 0;
+    }
+
+    .btn-reserva {
+        align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicio {
+        margin: 2rem auto;
+        gap: 1.5rem;
+    }
+
+    .servicio-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .servicio-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .btn-reserva {
+        width: 100%;
+        padding: 14px;
+        font-size: 0.95rem;
+    }
 }
