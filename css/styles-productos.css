@@ -470,36 +470,3 @@ body {
     max-height: 100%;
     object-fit: contain;
 }
-
-@keyframes scrollBrands {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-@media (max-width: 768px) {
-    .brand-item {
-        width: 120px;
-        height: 60px;
-    }
-
-    .brands-track {
-        gap: 20px;
-        padding-left: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .brand-item {
-        width: 90px;
-        height: 50px;
-    }
-
-    .brands-swapper {
-        padding: 20px 0;
-    }
-}
