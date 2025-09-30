@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wabi Sabi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles-detalles-carrito.css" />
+</head>
+
+<body>
+
+    <!-- Navigator bar -->
+    <header class="header">
+        <div class="logo-container">
+            <h4 class="nombre-logo">Wabi Sabi</h4>
+        </div>
+
+        <div class="menu-hamburguesa" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <a class="nav-inicio" href="index.html">Inicio</a>
+            <a class="nav-servicios" href="servicios.html">Servicios</a>
+            <a class="nav-productos" href="productos.html">Productos</a>
+            <a class="nav-contacto" href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="acciones-derecha">
+            <div class="barra-busqueda">
+                <input type="text" placeholder="Buscar productos..." id="search-input">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="icon-carrito">
+                <a href="carrito.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="detalle-carrito">
+        <div class="detalle-imagen">
+            <img src="img/gel-facial.jpg" alt="Gel Facial">
+        </div>
+
+        <div class="detalle-info">
+            <h1>Gel Facial Hidratante</h1>
+            <p class="price">$20.000</p>
+            <p class="description">
+                Gel facial refrescante con extractos naturales que hidrata profundamente y ayuda a mantener la piel
+                suave y luminosa.
+            </p>
+
+            <div class="cantidad-container">
+                <label for="cantidad">Cantidad:</label>
+                <div class="cantidad-control">
+                    <button class="btn-cantidad">-</button>
+                    <input type="number" id="cantidad" value="1" min="1">
+                    <button class="btn-cantidad">+</button>
+                </div>
+            </div>
+
+            <div class="acciones">
+                <button class="btn-actualizar">Actualizar carrito</button>
+                <button class="btn-eliminar">Eliminar del carrito</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
