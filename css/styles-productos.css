@@ -88,7 +88,7 @@ body {
 
 @media (max-width: 768px) {
     .main-title-container h1 {
-        font-size: 1.2rem;
+        font-size: 3rem;
         margin-top: 1rem;
     }
 
@@ -99,7 +99,7 @@ body {
 
 @media (max-width: 480px) {
     .main-title-container h1 {
-        font-size: 1rem;
+        font-size: 3rem;
         line-height: 1.1;
     }
 
