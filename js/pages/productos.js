@@ -25,7 +25,7 @@ function createProductCard(product) {
     `;
 }
 
-// FUNCION para renderizar productos en un contenedor
+// FUNCION para render productos en un contenedor
 function renderProductsInContainer(products, container) {
     if (!container) {
         return;
@@ -34,3 +34,33 @@ function renderProductsInContainer(products, container) {
     const productsHTML = products.map(product => createProductCard(product)).join('');
     container.innerHTML = productsHTML;
 }
+
+// FUNCION render principal
+async function render() {
+    const containers = document.querySelectorAll('.products-container');
+
+    containers.forEach(container => {
+        container.innerHTML = '<p style="text-align: center; color: #666; padding: 2rem;">Cargando productos...</p>';
+    });
+
+    const allProducts = await getProducts();
+
+    const geles = allProducts.filter(p => p.fields.Category === 'Geles');
+    const hidratantes = allProducts.filter(p => p.fields.Category === 'Hidratantes');
+    const exfoliantes = allProducts.filter(p => p.fields.Category === 'Exfoliantes');
+    const otros = allProducts.filter(p => p.fields.Category === 'Otros');
+
+    if (containers[0]) renderProductsInContainer(allProducts, containers[0]);
+
+    if (containers[1]) {
+        const cuidadoPiel = [...hidratantes, ...geles];
+        renderProductsInContainer(cuidadoPiel.length > 0 ? cuidadoPiel : allProducts, containers[1]);
+    }
+
+    if (containers[2]) {
+        const exclusivos = [...exfoliantes, ...otros];
+        renderProductsInContainer(exclusivos.length > 0 ? exclusivos : allProducts, containers[2]);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', render);
