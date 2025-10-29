@@ -3,6 +3,23 @@
     align-items: center;
     padding: 10px 40px;
     background: #F8F9FA;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header.scrolled {
+    padding: 5px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+}
+
+.header.scrolled .nombre-logo {
+    font-size: 1.3rem;
 }
 
 /*-----------------Logo-----------------*/
@@ -23,6 +40,7 @@
     font-size: 1.5rem;
     color: #2D2A4A;
     font-weight: 700;
+    transition: font-size 0.3s ease;
 }
 
 /*-----------------Navbar-----------------*/
@@ -152,6 +170,10 @@
     .header {
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    .header.scrolled {
+        padding: 5px 20px;
     }
 
     .barra-busqueda {
