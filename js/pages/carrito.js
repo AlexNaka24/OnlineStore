@@ -85,7 +85,7 @@ function renderCart() {
         container.innerHTML = `
             <div style="text-align: center; padding: 3rem;">
                 <i class="fas fa-shopping-cart" style="font-size: 4rem; color: #ccc; margin-bottom: 1rem;"></i>
-                <h2 style="color: #666; margin-bottom: 1rem;">Tu carrito está vacio</h2>
+                <h2 style="color: #666; margin-bottom: 1rem;">Tu carrito esta vacio</h2>
                 <p style="color: #999; margin-bottom: 2rem;">¡Agrega productos para empezar a comprar!</p>
                 <a href="productos.html" class="btn-detalle" style="display: inline-block; padding: 12px 24px;">
                     Ver productos
@@ -205,7 +205,7 @@ function setupEventListeners() {
 
             if (e.target.classList.contains('delete-icon')) {
                 const productId = e.target.dataset.productId;
-                if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
+                if (confirm('¿Estas seguro de que queres eliminar este producto?')) {
                     removeItem(productId);
                 }
             }
@@ -216,10 +216,8 @@ function setupEventListeners() {
     const checkoutButton = document.querySelector('.btn-checkout');
     if (checkoutButton) {
         checkoutButton.addEventListener('click', () => {
-            const cartItems = loadCart();
-            const total = calculateTotal(cartItems);
 
-            alert(`¡Gracias por tu compra, el total es: ${total})`)
+            window.location.href = 'checkout.html';
         });
     }
 }
