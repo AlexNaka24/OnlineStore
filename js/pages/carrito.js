@@ -64,7 +64,7 @@ function createCartItemCard(item) {
                         <button class="btn-increase" data-product-id="${item.id}">+</button>
                     </div>
                     <div class="product-prices-container">
-                        <span class="price-text">$${(item.price * item.quantity).toLocaleString('es-AR')}</span>
+                        <span class="price-text">$${(item.price * item.quantity)}</span>
                     </div>
                 </div>
             </div>

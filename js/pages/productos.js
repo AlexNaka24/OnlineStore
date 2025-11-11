@@ -1,8 +1,5 @@
-
-
 import { getProducts } from '../modules/api.js';
 import { cart } from '../cart/cart-manager.js';
-
 
 let allProducts = [];
 let filteredProducts = [];
@@ -24,7 +21,7 @@ function createProductCard(product) {
             </div>
             <div class="product-info">
                 <h3>${fields.Name || 'Sin nombre'}</h3>
-                <span class="price-new">$${fields.Price?.toLocaleString('es-AR') || '0'}</span>
+                <span class="price-new">$${fields.Price || '0'}</span>
                 ${fields.Description ? `<p class="installments">${fields.Description}</p>` : ''}
                 <button class="btn-comprar" 
                         data-product-id="${product.id}"
@@ -53,62 +50,12 @@ function renderProductsInContainer(products, container) {
     container.innerHTML = products.map(p => createProductCard(p)).join('');
 }
 
-function getActiveFilters() {
-    const categoryCheckboxes = document.querySelectorAll('.filtro-seccion:nth-child(1) input[type="checkbox"]:checked');
-    const selectedCategories = [];
-
-    categoryCheckboxes.forEach(cb => {
-        const labelText = cb.parentElement.textContent.trim();
-        const categoryName = labelText.split('(')[0].trim();
-
-        if (categoryName !== 'Todos') {
-            selectedCategories.push(categoryName);
-        }
-    });
-
-    const minPriceInput = document.querySelector('.input-precio input[placeholder="$0"]');
-    const maxPriceInput = document.querySelector('.input-precio input[placeholder="$100.000"]');
-
-    const minPrice = parseFloat(minPriceInput?.value.replace(/\D/g, '') || 0);
-    const maxPrice = parseFloat(maxPriceInput?.value.replace(/\D/g, '') || Infinity);
-
-    return {
-        categories: selectedCategories,
-        minPrice: minPrice,
-        maxPrice: maxPrice === 0 ? Infinity : maxPrice
-    };
-}
-
-function applyFilters() {
-    const filters = getActiveFilters();
-
-    filteredProducts = allProducts.filter(product => {
-        const fields = product.fields;
-        const productPrice = fields.Price || 0;
-        const productCategory = fields.Category || '';
-
-        const priceMatch = productPrice >= filters.minPrice && productPrice <= filters.maxPrice;
-
-        let categoryMatch = true;
-        if (filters.categories.length > 0) {
-            categoryMatch = filters.categories.some(filterCategory => {
-                const mappedCategories = CATEGORY_MAP[filterCategory] || [];
-                return mappedCategories.includes(productCategory);
-            });
-        }
-
-        return priceMatch && categoryMatch;
-    });
-
-    renderAllSections();
-    updateCounters();
-}
-
 function searchProducts(query) {
     const searchTerm = query.toLowerCase().trim();
 
     if (searchTerm === '') {
         filteredProducts = [...allProducts];
+
     } else {
         filteredProducts = allProducts.filter(product => {
             const name = (product.fields.Name || '').toLowerCase();
@@ -128,15 +75,8 @@ function renderAllSections() {
     const sections = document.querySelectorAll('.productos-exclusivos');
     const containers = document.querySelectorAll('.products-container');
 
-    const filters = getActiveFilters();
-    const hasActiveFilters = filters.categories.length > 0 ||
-        filters.minPrice > 0 ||
-        filters.maxPrice !== Infinity;
-
     const navbarSearchInput = document.querySelector('.header #search-input');
     const hasSearchQuery = navbarSearchInput && navbarSearchInput.value.trim() !== '';
-
-    const isFiltering = hasActiveFilters || hasSearchQuery;
 
     if (filteredProducts.length === 0) {
         sections.forEach(section => section.style.display = 'none');
@@ -148,10 +88,11 @@ function renderAllSections() {
                     No se encontraron productos
                 </p>`;
         }
+
         return;
     }
 
-    if (isFiltering) {
+    if (hasSearchQuery) {
         sections.forEach((section, index) => {
             if (index === 0) {
                 section.style.display = 'block';
@@ -204,67 +145,7 @@ function renderAllSections() {
     }
 }
 
-function updateCounters() {
-    const counts = {
-        'Todos': allProducts.length,
-        'Cuidado facial': allProducts.filter(p =>
-            p.fields.Category === 'Geles' || p.fields.Category === 'Hidratantes'
-        ).length,
-        'Exfoliantes': allProducts.filter(p =>
-            p.fields.Category === 'Exfoliantes'
-        ).length,
-        'Accesorios': allProducts.filter(p =>
-            p.fields.Category === 'Otros'
-        ).length
-    };
-
-    document.querySelectorAll('.filtro-seccion:nth-child(1) label').forEach(label => {
-        const text = label.textContent.trim().split('(')[0].trim();
-
-        if (counts[text] !== undefined) {
-            const checkbox = label.querySelector('input');
-            label.innerHTML = `<input type="checkbox" ${checkbox.checked ? 'checked' : ''}> ${text} (${counts[text]})`;
-        }
-    });
-}
-
 function setupEventListeners() {
-    const categoryCheckboxes = document.querySelectorAll('.filtro-seccion:nth-child(1) input[type="checkbox"]');
-
-    categoryCheckboxes.forEach((checkbox, index) => {
-        checkbox.addEventListener('change', (e) => {
-            if (index === 0 && e.target.checked) {
-                categoryCheckboxes.forEach((cb, i) => {
-                    if (i !== 0) cb.checked = false;
-                });
-            }
-            else if (index !== 0 && e.target.checked) {
-                categoryCheckboxes[0].checked = false;
-            }
-
-            const anyChecked = Array.from(categoryCheckboxes).some(cb => cb.checked);
-            if (!anyChecked) {
-                categoryCheckboxes[0].checked = true;
-            }
-
-            applyFilters();
-        });
-    });
-
-    const btnFiltro = document.querySelector('.btn-filtro');
-    if (btnFiltro) {
-        btnFiltro.addEventListener('click', applyFilters);
-    }
-
-    const priceInputs = document.querySelectorAll('.input-precio input');
-    priceInputs.forEach(input => {
-        input.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                applyFilters();
-            }
-        });
-    });
-
     const navbarSearchInput = document.querySelector('.header #search-input');
     const navbarSearchButton = document.querySelector('.header #search-button');
 
@@ -294,12 +175,12 @@ function setupEventListeners() {
         navbarSearchInput.addEventListener('input', (e) => {
             if (e.target.value === '') {
                 filteredProducts = [...allProducts];
-                applyFilters();
+                renderAllSections();
             }
         });
     }
 
-    // EVENTO DE AGREGAR AL CARRITO
+    // Evento de agregar al carrito
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('btn-comprar')) {
             const button = e.target;
@@ -310,7 +191,6 @@ function setupEventListeners() {
                 image: button.dataset.productImage,
                 description: button.dataset.productDescription
             };
-
 
             cart.addItem(productData);
 
@@ -365,10 +245,7 @@ async function init() {
         }
 
         renderAllSections();
-        updateCounters();
         setupEventListeners();
-
-
         cart.updateCartBadge();
 
     } catch (error) {
