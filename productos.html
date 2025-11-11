@@ -87,70 +87,40 @@
         </div>
     </div>
 
-    <div class="layout-filtro">
+    <!-- Contenido proncipal de la pagina, seeccion de los prodcutos -->
+    <main class="contenido-principal">
 
-        <aside class="filtro-ml">
-            <h3>Filtrar por</h3>
-
-            <div class="filtro-seccion">
-                <h4>Categoria</h4>
-                <label><input type="checkbox" checked> Todos (6)</label>
-                <label><input type="checkbox"> Cuidado facial (2)</label>
-                <label><input type="checkbox"> Exfoliantes (3)</label>
-                <label><input type="checkbox"> Accesorios (1)</label>
+        <!-- Seccion de productos destacados -->
+        <section class="productos-exclusivos">
+            <div class="title-productos-exclusivos">
+                <h2>Productos destacados</h2>
             </div>
+            <div class="products-container">
 
-            <div class="filtro-seccion">
-                <h4>Precio</h4>
-                <div class="rango-precio">
-                    <div class="input-precio">
-                        <label>Desde</label>
-                        <input type="text" placeholder="$0">
-                    </div>
-                    <div class="input-precio">
-                        <label>Hasta</label>
-                        <input type="text" placeholder="$100.000">
-                    </div>
-                    <button class="btn-filtro">→</button>
-                </div>
             </div>
-        </aside>
+        </section>
 
+        <!-- Seccion de productos cuidados de la piel -->
+        <section class="productos-exclusivos">
+            <div class="title-productos-exclusivos">
+                <h2>Lo ultimo en cuidado para tu piel</h2>
+            </div>
+            <div class="products-container">
 
-        <!-- Contenido proncipal de la pagina, seeccion de los prodcutos -->
-        <main class="contenido-principal">
+            </div>
+        </section>
 
-            <!-- Seccion de productos destacados -->
-            <section class="productos-exclusivos">
-                <div class="title-productos-exclusivos">
-                    <h2>Productos destacados</h2>
-                </div>
-                <div class="products-container">
+        <!-- Seccion de productos exclusivos en wabi sabi-->
+        <section class="productos-exclusivos">
+            <div class="title-productos-exclusivos">
+                <h2>Exclusivos en Wabi Sabi</h2>
+            </div>
+            <div class="products-container">
 
-                </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <!-- Seccion de productos cuidados de la piel -->
-            <section class="productos-exclusivos">
-                <div class="title-productos-exclusivos">
-                    <h2>Lo ultimo en cuidado para tu piel</h2>
-                </div>
-                <div class="products-container">
-
-                </div>
-            </section>
-
-            <!-- Seccion de productos exclusivos en wabi sabi-->
-            <section class="productos-exclusivos">
-                <div class="title-productos-exclusivos">
-                    <h2>Exclusivos en Wabi Sabi</h2>
-                </div>
-                <div class="products-container">
-
-                </div>
-            </section>
-        </main>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -184,9 +154,10 @@
         </div>
     </footer>
 
-
+    <script type="module" src="js/cart/cart-manager.js"></script>
     <script type="module" src="js/pages/productos.js"></script>
     <script type="module" src="js/pages/navbar.js"></script>
+    <script type="module" src="js/pages/carrito.js"></script>
 </body>
 
 </html>
