@@ -7,21 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const navbar = document.getElementById('navbar');
 
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-
     if (menuToggle && navbar) {
         menuToggle.addEventListener('click', () => {
             navbar.classList.toggle('active');
         });
 
         navbar.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('cl|ick', () => {
                 navbar.classList.remove('active');
             });
         });
