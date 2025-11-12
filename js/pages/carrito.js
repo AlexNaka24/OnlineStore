@@ -55,7 +55,7 @@ function createCartItemCard(item) {
 
                 <p class="cart-product-component-description">${item.description || 'Sin descripción'}</p>
 
-                <a href="detalles.html" class="btn-detalle">Ver detalles</a>
+                <a href="detalles-carrito.html?id=${item.id}" class="btn-detalle">Ver detalles</a>
 
                 <div class="quantity-button-price-container">
                     <div class="quantity-button-container">
@@ -71,7 +71,6 @@ function createCartItemCard(item) {
         </div>
     `;
 }
-
 
 function renderCart() {
     const cartItems = loadCart();
