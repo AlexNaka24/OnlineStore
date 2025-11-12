@@ -95,6 +95,10 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .btn-login:hover {
