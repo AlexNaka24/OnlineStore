@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - Wabi Sabi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/admin-panel.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1><i class="fas fa-cog"></i> Panel Admin</h1>
+            <button id="btn-logout" class="btn-logout">Cerrar Sesión</button>
+        </header>
+
+        <div class="admin-content">
+            <!-- Botón Agregar -->
+            <button id="btn-add" class="btn-add">
+                <i class="fas fa-plus"></i> Agregar Producto
+            </button>
+
+            <!-- Lista de productos -->
+            <div id="products-list"></div>
+        </div>
+    </div>
+
+    <!-- Modal simple -->
+    <div id="modal" class="modal">
+        <div class="modal-box">
+            <h2 id="modal-title">Agregar Producto</h2>
+            <form id="product-form">
+                <input type="text" id="name" placeholder="Nombre" required>
+                <input type="number" id="price" placeholder="Precio" required>
+                <input type="text" id="description" placeholder="Descripción">
+                <select id="category" required>
+                    <option value="">Categoría</option>
+                    <option value="Geles">Geles</option>
+                    <option value="Hidratantes">Hidratantes</option>
+                    <option value="Exfoliantes">Exfoliantes</option>
+                    <option value="Otros">Otros</option>
+                </select>
+                <input type="url" id="image" placeholder="URL de imagen" required>
+
+                <div class="modal-buttons">
+                    <button type="button" id="btn-cancel" class="btn-cancel">Cancelar</button>
+                    <button type="submit" class="btn-save">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="js/pages/admin-panel.js"></script>
+</body>
+
+</html>
