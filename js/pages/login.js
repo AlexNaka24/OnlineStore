@@ -9,6 +9,6 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
         localStorage.setItem('adminLoggedIn', 'true');
         localStorage.setItem('adminUsername', username);
 
-        window.location.href = 'productos.html';
+        window.location.href = 'admin-panel.html';
     }
 });
