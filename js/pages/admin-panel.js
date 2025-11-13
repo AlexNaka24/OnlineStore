@@ -1,6 +1,10 @@
+
+
+
+
+
 import { getProducts, createProduct, updateProduct, deleteProduct } from '../modules/api.js';
 
-// Verificar login
 if (!sessionStorage.getItem('admin')) {
     window.location.href = 'login.html';
 }
@@ -8,7 +12,6 @@ if (!sessionStorage.getItem('admin')) {
 let allProducts = [];
 let editingId = null;
 
-// Mostrar notificación simple
 function showNotification(message, type = 'success') {
     const notification = document.createElement('div');
     notification.textContent = message;
@@ -31,7 +34,7 @@ function showNotification(message, type = 'success') {
     }, 3000);
 }
 
-// Renderizar productos
+
 async function renderProducts() {
     const container = document.getElementById('products-list');
     container.innerHTML = '<p style="text-align:center;color:#666;">Cargando productos...</p>';
@@ -71,7 +74,7 @@ async function renderProducts() {
     }
 }
 
-// Abrir modal para agregar
+
 document.getElementById('btn-add').addEventListener('click', () => {
     editingId = null;
     document.getElementById('modal-title').textContent = 'Agregar Producto';
@@ -79,19 +82,12 @@ document.getElementById('btn-add').addEventListener('click', () => {
     document.getElementById('modal').classList.add('show');
 });
 
-// Cerrar modal
+
 document.getElementById('btn-cancel').addEventListener('click', () => {
     document.getElementById('modal').classList.remove('show');
 });
 
-// Cerrar modal al hacer click fuera
-document.getElementById('modal').addEventListener('click', (e) => {
-    if (e.target.id === 'modal') {
-        document.getElementById('modal').classList.remove('show');
-    }
-});
 
-// Guardar producto (crear o actualizar)
 document.getElementById('product-form').addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -129,7 +125,7 @@ document.getElementById('product-form').addEventListener('submit', async (e) => 
     }
 });
 
-// Editar producto
+
 window.editProductHandler = (productId) => {
     const product = allProducts.find(p => p.id === productId);
 
@@ -148,7 +144,7 @@ window.editProductHandler = (productId) => {
     }
 };
 
-// Eliminar producto
+
 window.deleteProductHandler = async (productId) => {
     const product = allProducts.find(p => p.id === productId);
 
@@ -166,13 +162,13 @@ window.deleteProductHandler = async (productId) => {
     }
 };
 
-// Cerrar sesión
+
 document.getElementById('btn-logout').addEventListener('click', () => {
-    if (confirm('¿Cerrar sesión?')) {
+    if (confirm('¿Cerrar sesion?')) {
         sessionStorage.removeItem('admin');
         window.location.href = 'login.html';
     }
 });
 
-// Iniciar
+
 renderProducts();

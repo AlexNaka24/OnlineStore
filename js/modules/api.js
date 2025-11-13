@@ -1,3 +1,6 @@
+
+
+
 import { CONFIG } from "../config/config.js";
 
 const API_TOKEN = CONFIG.AIRTABLE_TOKEN;
@@ -20,7 +23,7 @@ export async function getProducts() {
         return data.records;
 
     } catch (err) {
-        console.error('Error fetching products from Airtable:', err);
+        console.error('Error:', err);
         return [];
     }
 };
