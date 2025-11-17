@@ -11,8 +11,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 
     if (username === USER && password === PASS) {
         sessionStorage.setItem('admin', 'true');
-        alert('¡Bienvenido!');
-        window.location.href = 'admin.html';
+        window.location.href = 'admin-panel.html';
     } else {
         alert('Usuario o contraseña incorrectos');
     }
