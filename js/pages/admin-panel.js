@@ -164,7 +164,7 @@ window.deleteProductHandler = async (productId) => {
 
 
 document.getElementById('btn-logout').addEventListener('click', () => {
-    if (confirm('¿Cerrar sesion?')) {
+    if (confirm('¿Cerrar sesión?')) {
         sessionStorage.removeItem('admin');
         window.location.href = 'login.html';
     }
