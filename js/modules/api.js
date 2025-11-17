@@ -1,13 +1,10 @@
 
 
+import { API_TOKEN, BASE_ID, TABLE_NAME } from '../config/config.js';
 
-import { CONFIG } from "../config/config.js";
-
-const API_TOKEN = CONFIG.AIRTABLE_TOKEN;
-const BASE_ID = CONFIG.AIRTABLE_BASE_ID;
-const TABLE_NAME = 'Products';
 const API_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
 
+// Obtener productos (GET)
 export async function getProducts() {
     try {
         const response = await fetch(API_URL, {
@@ -17,16 +14,19 @@ export async function getProducts() {
             }
         });
 
+        if (!response.ok) {
+            throw new Error(`Error HTTP! status: ${response.status}`);
+        }
+
         const data = await response.json();
         console.log('Products from Airtable:', data);
-
-        return data.records;
+        return data.records || [];
 
     } catch (err) {
-        console.error('Error:', err);
+        console.error('Error fetching products:', err);
         return [];
     }
-};
+}
 
 // Crear producto (POST)
 export async function createProduct(productData) {
