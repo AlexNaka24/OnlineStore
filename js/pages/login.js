@@ -1,9 +1,7 @@
 
 
-import { ADMIN } from '../config/admin.js';
-
-const USER = ADMIN.USER;
-const PASS = ADMIN.PASS;
+const USER = 'admin';
+const PASS = '1234';
 
 document.getElementById('loginForm').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -13,6 +11,9 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 
     if (username === USER && password === PASS) {
         sessionStorage.setItem('admin', 'true');
-        window.location.href = 'admin-panel.html';
+        alert('¡Bienvenido!');
+        window.location.href = 'admin.html';
+    } else {
+        alert('Usuario o contraseña incorrectos');
     }
 });

@@ -1,7 +1,8 @@
 
 
-import { API_TOKEN, BASE_ID, TABLE_NAME } from '../config/config.js';
-
+const API_TOKEN = 'patvKICdiwthlci27.4ed8d9c46357c6accc069fffc77a32ac8bda4025f57e1c56468112c96c3749b6';
+const BASE_ID = 'app6hjBIA246t90pO';
+const TABLE_NAME = 'Products';
 const API_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
 
 // Obtener productos (GET)
